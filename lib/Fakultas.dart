@@ -12,16 +12,26 @@ class Fakultas extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(border: Border.all()),
             padding: EdgeInsets.all(14),
-            child: Text("baris 1"),
+            child: ListTile(
+              trailing: FlutterLogo(),
+              title: Text('FPMIPA'),
+              subtitle: Text('Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam'),
+            ),
           ),
           onTap: () {
             //gunakan navigator untuk panggil RincianFakultas
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => RincianFakultas()));
           },
         ),
         Container(
             decoration: BoxDecoration(border: Border.all()),
             padding: EdgeInsets.all(14),
-            child: Text("baris kedua")),
+            child: ListTile(
+              trailing: FlutterLogo(),
+              title: Text('FPIPS'),
+              subtitle: Text('Fakultas Pendidikan Ilmu Pengetahuan Sosial'),
+            ),
+          ),
       ]),
     );
   }
